@@ -1,0 +1,156 @@
+.innova-navbar {
+    background-color: rgba(66, 78, 94, 0.85); /* Semi-transparent dark blue */
+    backdrop-filter: blur(12px); /* Glassmorphism effect */
+    -webkit-backdrop-filter: blur(12px);
+    padding: 1rem 3rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.innova-icon {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    text-decoration: none;
+    z-index: 1001;
+    letter-spacing: -0.5px;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+    z-index: 1001;
+    padding: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.menu-toggle:hover {
+    transform: scale(1.1);
+}
+
+.innova-navbar-list {
+    list-style: none;
+    display: flex;
+    gap: 2.5rem;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.innova-navbar-item {
+    margin: 0;
+}
+
+.innova-navbar-link {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    padding: 0.5rem 0;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* Elegant underline animation */
+.innova-navbar-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #45936c; /* Accent color */
+    transition: width 0.3s ease;
+}
+
+.innova-navbar-link:hover::after,
+.innova-navbar-link.active::after {
+    width: 100%;
+}
+
+.innova-navbar-link:hover,
+.innova-navbar-link.active {
+    color: white;
+    background-color: transparent; /* Remove previous background hover */
+}
+
+/* Desktop-specific positioning */
+@media (min-width: 769px) {
+    .innova-icon {
+         position: static; /* Reset absolute positioning */
+         transform: none;
+         font-size: 1.8rem;
+    }
+    
+    .innova-navbar {
+        justify-content: space-between; /* Logo left, Menu right */
+    }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .innova-navbar {
+        padding: 1rem 1.5rem;
+        justify-content: space-between;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .innova-navbar-list {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%; /* Full width for more immersive feel */
+        height: 100vh;
+        background-color: rgba(66, 78, 94, 0.98);
+        backdrop-filter: blur(15px);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        transition: right 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+        padding-top: 0;
+        z-index: 1000;
+    }
+
+    .innova-navbar-list.active {
+        right: 0;
+    }
+
+    .innova-navbar-item {
+        margin: 0;
+        width: auto;
+    }
+
+    .innova-navbar-link {
+        font-size: 1.5rem;
+        padding: 1rem;
+        font-weight: 300;
+    }
+    
+    .innova-navbar-link::after {
+        display: none; /* No underline anim on mobile */
+    }
+
+    .innova-icon {
+        position: static;
+        transform: none;
+        font-size: 1.4rem;
+    }
+}
