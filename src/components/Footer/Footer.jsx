@@ -13,19 +13,37 @@ const Footer = () => {
           <p>Transformando hogares con tecnología y diseño.</p>
         </div>
         <div className="footer-social">
-          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <a
+            href="https://facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+          >
             <Facebook />
           </a>
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+          >
             <Instagram />
           </a>
-          <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+          <a
+            href="https://wa.me/1234567890"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="WhatsApp"
+          >
             <Whatsapp />
           </a>
         </div>
       </div>
       <div className="footer-bottom">
-        <p>&copy; {new Date().getFullYear()} Innova Home. Todos los derechos reservados.</p>
+        <p>
+          &copy; {new Date().getFullYear()} Innova Home. Todos los derechos
+          reservados.
+        </p>
       </div>
     </footer>
   );

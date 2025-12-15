@@ -1,9 +1,11 @@
 # Proyecto Académico - Curso de Frontend UTN
 
 ## Descripción
+
 Bienvenidos al repositorio del proyecto desarrollado como parte del curso de Frontend de la Universidad Tecnológica Nacional (UTN). Este proyecto tiene como objetivo principal aplicar los conocimientos adquiridos durante el curso, implementando las mejores prácticas de desarrollo web moderno.
 
 ## Características Principales
+
 - Desarrollo de una aplicación web responsiva
 - Implementación de componentes reutilizables
 - Uso de React para la interfaz de usuario
@@ -11,6 +13,7 @@ Bienvenidos al repositorio del proyecto desarrollado como parte del curso de Fro
 - Seguimiento de buenas prácticas de desarrollo
 
 ## Tecnologías Utilizadas
+
 - React
 - CSS
 - VITE
@@ -18,6 +21,7 @@ Bienvenidos al repositorio del proyecto desarrollado como parte del curso de Fro
 - Git
 
 ## Instalación
+
 1. Clona el repositorio:
    ```bash
    git clone https://github.com/rofkatz/tp-front-final.git
@@ -32,6 +36,7 @@ Bienvenidos al repositorio del proyecto desarrollado como parte del curso de Fro
    ```
 
 ## Estructura del Proyecto
+
 ```
 innova-home/
 ├── public/          # Archivos estáticos
@@ -46,4 +51,5 @@ innova-home/
 ```
 
 ## Autor
+
 - Maria del Rosario Fernandez Katz (rofkatz)
